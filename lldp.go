@@ -9,7 +9,7 @@ import (
 	"math"
 	"time"
 
-	"github.com/mdlayher/ethernet"
+	"github.com/psaab/ethernet"
 )
 
 //go:generate stringer -output=string.go -type=ChassisIDSubtype,PortIDSubtype

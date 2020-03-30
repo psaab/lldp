@@ -175,6 +175,9 @@ func (f *Frame) UnmarshalBinary(b []byte) error {
 		// Advance to next TLV and keep looping
 		l += 2 + int(t.Length)
 		tt = append(tt, t)
+		if t.Type == TLVTypeEnd {
+			break
+		}
 	}
 
 	// Must have at least four mandatory TLVs

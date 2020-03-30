@@ -55,6 +55,7 @@ func (c *ChassisID) MarshalBinary() ([]byte, error) {
 func (c *ChassisID) UnmarshalBinary(b []byte) error {
 	// Must indicate at least a subtype.
 	if len(b) < 1 {
+		panic("here")
 		return io.ErrUnexpectedEOF
 	}
 
